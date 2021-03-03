@@ -7,4 +7,4 @@ with features like
 4. Play song on youtube
 5. Telling Jokes
 6. Along with Some funny Stuffs
-More Features can be added.
+## Pull Requests are Welcomed
