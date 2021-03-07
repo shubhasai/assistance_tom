@@ -19,17 +19,12 @@ def take_command():
     try:
         with sr.Microphone(device_index=0) as source:
             print('Listening...')
-            voice = listener.listen(source,timeout=3)
+            voice = listener.listen(source,timeout=1, phrase_time_limit=5)
             command = listener.recognize_google(voice)
             command=command.lower()
-            if 'tom' in command:
-                command = command.replace('tom','')
-                engine.say('I heard it')
-                engine.runAndWait()
-                print(command)
-                talk(command)
     except:
-        pass
+        print("Say that again please...")  
+        return "None"
     return command
 def run_tom():
     command = take_command()
